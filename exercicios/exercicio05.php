@@ -10,7 +10,7 @@ h1, .container {
     text-align: center;
     box-shadow: black 2px 2px 10px;
     margin: auto;
-    width: 950px;
+    max-width: 950px;
 } 
 
 h1 {background-color: grey;}
