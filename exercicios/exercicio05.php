@@ -9,6 +9,7 @@
 h1 {
     text-align: center;
     background-color: grey;
+    box-shadow: black 2px 2px 10px;
 
     margin: auto;
     width: 950px;
