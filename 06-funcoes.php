@@ -41,6 +41,7 @@
     }    
     ?>
     <p>Estamos no curso de <?=dadosCurso()?></p>
+    <p><?=dadosCurso()?> é ministrado no Senac Penha.</p>
 
 
 </body>
