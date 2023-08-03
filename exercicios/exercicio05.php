@@ -6,30 +6,24 @@
     <title>Exercicio 5 - Funções</title>
 
 <style>
-h1 {
+h1, .container {
     text-align: center;
-    background-color: grey;
     box-shadow: black 2px 2px 10px;
-
     margin: auto;
     width: 950px;
-}
+} 
+
+h1 {background-color: grey;}
 .container {
-    text-align: center;
     background-color: lightgrey;
-    box-shadow: black 2px 2px 10px;
-    
-    margin: auto;
-    width: 950px;
-
     font-size: 2rem;
     font-weight: 600;
 }
-
 </style>
 
 </head>
 <body>
+
 <article class="container">
     <h1>Calculando Média de Notas</h1>
     <?php
@@ -57,14 +51,15 @@ h1 {
         
         echo "<div style='color:".($situacao === "Aprovado"?"blue":"red")."'>";
     ?>
-
+    
     <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> <?=$situacao?></p>
     
     <?php    
         echo "</div>";
     }
     ?>
-    </div>
+    
 </article>
+
 </body>
 </html>
