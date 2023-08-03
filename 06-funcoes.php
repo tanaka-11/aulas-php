@@ -43,6 +43,19 @@
     <p>Estamos no curso de <?=dadosCurso()?></p>
     <p><?=dadosCurso()?> é ministrado no Senac Penha.</p>
 
+    <hr>
+
+    <h2>Função com parâmetros (ou argumentos)</h2>
+    <?php
+        function soma($valor1, $valor2, $valor3){
+        //$total = Variável de escopo local dentro da função.
+            $total = $valor1 + $valor2 + $valor3;
+            return $total;
+        }
+    ?>
+    <p>Resultado 1: <?=soma(10,20,5)?> </p>
+        
+    
 
 </body>
 
