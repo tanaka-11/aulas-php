@@ -26,6 +26,7 @@ h1 {background-color: grey;}
 
 <article class="container">
     <h1>Calculando Média de Notas</h1>
+    
     <?php
     function calcularMedia($nota1, $nota2) {
         return ($nota1 + $nota2) / 2;
@@ -58,7 +59,7 @@ h1 {background-color: grey;}
         echo "</div>";
     }
     ?>
-    
+
 </article>
 
 </body>
