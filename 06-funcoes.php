@@ -34,6 +34,14 @@
 
     </section>
 
+    <h2>Função com retorno de dados (Função)</h2>
+    <?php
+        function dadosCurso(){
+        return "Técnico em Informatica para Internet";
+    }    
+    ?>
+    <p>Estamos no curso de <?=dadosCurso()?></p>
+
 
 </body>
 
