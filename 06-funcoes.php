@@ -53,8 +53,14 @@
             return $total;
         }
     ?>
-    <p>Resultado 1: <?=soma(10,20,5)?> </p>
-    <p>Resultado 2: <?=soma(23,85,45.5)?></p>    
+    <!-- Chamando e exibindo diretamente o retorno -->
+    <p>Resultado 1: <?=soma(10,20,5)?></p>
+    <p>Resultado 2: <?=soma(23,85,45.5)?></p>
+    
+    <?php
+    // Chamando e guardando o retorno
+        $resultado3 = soma(500,480,700);
+    ?>
     
 
 </body>
