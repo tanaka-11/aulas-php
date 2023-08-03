@@ -12,6 +12,18 @@
 <body>
     <h1 style="text-align: center;">Criando e usando funções</h1>
     <hr>
+    <h2>Funções como procedimento ou sub-rotina</h2>
+
+    <?php
+        function dadosAutor(){
+            echo "<div>";
+            echo "<p>Marina Tanaka dos Santos Garcia</p>";
+            echo "<p> <a href=''>mtanakasg@gmail.com</a> </p>";
+            echo "</div>";
+        }
+    ?>
+
+    
 
 </body>
 
