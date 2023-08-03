@@ -23,15 +23,15 @@ h1 {
     width: 950px;
 
     font-size: 2rem;
+    font-weight: 600;
 }
 
 </style>
 
 </head>
 <body>
-
+<article class="container">
     <h1>Calculando Média de Notas</h1>
-
     <?php
     function calcularMedia($nota1, $nota2) {
         return ($nota1 + $nota2) / 2;
@@ -50,22 +50,21 @@ h1 {
     ["nomeAluno" => "Cleber", "nota1" => 9, "nota2" => 9],
     ["nomeAluno" => "Claudio", "nota1" => 6, "nota2" => 5]
     ];
-    ?>
 
-    <div class="container"> 
-    <?php
     foreach ($alunos as $aluno) {
         $media = calcularMedia($aluno["nota1"], $aluno["nota2"]);
         $situacao = verificarSituacao($media);
         
         echo "<div style='color:".($situacao === "Aprovado"?"blue":"red")."'>";
-        
-        echo $aluno["nomeAluno"]." - Média: ".$media." ".$situacao;
-        
+    ?>
+
+    <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> <?=$situacao?></p>
+    
+    <?php    
         echo "</div>";
     }
     ?>
     </div>
-
+</article>
 </body>
 </html>
