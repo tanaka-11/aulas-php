@@ -13,6 +13,7 @@ h1, .container {
     text-align: center;
     box-shadow: black 2px 2px 10px;
     margin: auto;
+    margin-top: 120px;
     max-width: 950px;
 } 
 
