@@ -103,16 +103,18 @@
     Isso ajudará a entrada/saída correta dos dados manipulados pela função, além de melhorar as mensagens de erro quando ocorre algum problema.
     */
     function verificaNegativo(int $valor):string {
+        /* Early return (é possivel omitir o else neste caso)*/
         if ($valor < 0){
             return "Valor negativo!";
-        } else {
+        } 
             return "Valor positivo!";
-        }
     }
+    // Codigo abaixo dá erro ao usar indução de tipos
+    /*<p>Número <b>50</b>:<?=verificaNegativo("texto")?>
+    */
     ?>
     <p>Número <b>10</b>: <?=verificaNegativo(10)?> </p>
     <p>Número <b>-10</b>: <?=verificaNegativo(-10)?> </p>
-    <p>Número <b>50</b>: <?=verificaNegativo("texto")?> </p>
 
 </body>
 
