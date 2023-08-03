@@ -37,7 +37,7 @@ h1 {
     }
 
     function verificarSituacao($media) {
-        return ($media >= 6) ? "Aprovado":"Reprovado";
+        return ($media >= 7)?"Aprovado":"Reprovado";
     }
     ?>
 
@@ -58,7 +58,9 @@ h1 {
         $situacao = verificarSituacao($media);
         
         echo "<div style='color:".($situacao === "Aprovado"?"blue":"red")."'>";
+        
         echo $aluno["nomeAluno"]." - Média: ".$media." ".$situacao;
+        
         echo "</div>";
     }
     ?>
