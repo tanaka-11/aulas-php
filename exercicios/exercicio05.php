@@ -60,7 +60,7 @@ body {background-color: lightslategrey;}
 
         ?>
     
-    <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> <?=$situacao?></p>
+    <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> - <?=$situacao?></p>
     
     <?php    
         echo "</div>";
