@@ -6,6 +6,9 @@
     <title>Exercicio 5 - Funções</title>
 
 <style>
+       
+h1 {background-color: grey;}
+
 h1, .container {
     text-align: center;
     box-shadow: black 2px 2px 10px;
@@ -13,12 +16,14 @@ h1, .container {
     max-width: 950px;
 } 
 
-h1 {background-color: grey;}
 .container {
     background-color: lightgrey;
     font-size: 2rem;
     font-weight: 600;
+
 }
+
+body {background-color: lightslategrey;}
 </style>
 
 </head>
@@ -51,12 +56,14 @@ h1 {background-color: grey;}
         $situacao = verificarSituacao($media);
         
         echo "<div style='color:".($situacao === "Aprovado"?"blue":"red")."'>";
-    ?>
+
+        ?>
     
     <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> <?=$situacao?></p>
     
     <?php    
         echo "</div>";
+        echo "<hr>";
     }
     ?>
 
