@@ -12,6 +12,8 @@ h1 {text-align: center;}
 
 </head>
 <body>
+<!-- Fazer css e desafio extra! -->
+
     <h1>Calculando Média de Notas</h1>
     <?php
         function soma($nota1,$nota2){
