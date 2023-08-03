@@ -61,7 +61,7 @@
     // Chamando e guardando o retorno
         $resultado3 = soma(500,480,700);
     ?>
-    
+    <p>Resultado 3: <?=$resultado3?></p>
 
 </body>
 
