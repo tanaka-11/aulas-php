@@ -63,6 +63,18 @@
     ?>
     <p>Resultado 3: <?=$resultado3?></p>
 
+    <?php
+        if($resultado3 > 100){
+    ?>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+    <?php
+    }
+    ?>
+
+<!-- Usando uma função como parte de uma condição -->
+    <?php if (soma (2,3,10) >= 10) { ?>
+        <p>Lorem, ipsum dolor sit.</p>
+    <?php } ?>    
 </body>
 
 </html>
