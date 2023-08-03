@@ -12,7 +12,7 @@
 <body>
     <h1 style="text-align: center;">Criando e usando funções</h1>
     <hr>
-    <h2>Funções como procedimento ou sub-rotina</h2>
+    <h2>Funções com procedimento ou sub-rotina</h2>
 
     <?php
         function dadosAutor(){
