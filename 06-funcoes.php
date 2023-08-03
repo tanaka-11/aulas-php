@@ -26,6 +26,12 @@
     <section>
         <h3>Chamada da sub-rotina/procedimento</h3>
         <?=dadosAutor()?>
+
+        <article>
+            <h4>Outra chamada</h4>
+            <?=dadosAutor()?>
+        </article>
+
     </section>
 
 
