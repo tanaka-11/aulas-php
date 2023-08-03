@@ -54,7 +54,7 @@
         }
     ?>
     <p>Resultado 1: <?=soma(10,20,5)?> </p>
-        
+    <p>Resultado 2: <?=soma(23,85,45.5)?></p>    
     
 
 </body>
