@@ -98,7 +98,11 @@
     Float -> Números com casas decimais.
     Array -> Vetor.
     */
-    function verificaNegativo($valor){
+
+    /* Indução de tipos deve ser feita nos parâmetros e no retorno da função.
+    Isso ajudará a entrada/saída correta dos dados manipulados pela função, além de melhorar as mensagens de erro quando ocorre algum problema.
+    */
+    function verificaNegativo(int $valor):string {
         if ($valor < 0){
             return "Valor negativo!";
         } else {
@@ -108,7 +112,7 @@
     ?>
     <p>Número <b>10</b>: <?=verificaNegativo(10)?> </p>
     <p>Número <b>-10</b>: <?=verificaNegativo(-10)?> </p>
-    
+    <p>Número <b>50</b>: <?=verificaNegativo("texto")?> </p>
 
 </body>
 
