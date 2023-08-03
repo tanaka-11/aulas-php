@@ -7,37 +7,54 @@
 
 <style>
 h1 {text-align: center;}
+.container {
+    text-align: center;
+    width: 950px;
+    background-color: lightgrey;
+    box-shadow: black 2px 2px 10px;
+    margin: auto;
+    font-size: 2rem;
+}
 
 </style>
 
 </head>
 <body>
-<!-- Fazer css e desafio extra! -->
 
     <h1>Calculando Média de Notas</h1>
+
     <?php
-        function soma($nota1,$nota2){
-            $media = ($nota1 + $nota2) / 2;
-            return $media;
+    function calcularMedia($nota1, $nota2) {
+        return ($nota1 + $nota2) / 2;
+    }
+
+    function verificarSituacao($media) {
+        return ($media >= 6) ? "Aprovado":"Reprovado";
     }
     ?>
 
     <?php
-        $media = soma(10,5);  
+    $alunos = [
+    ["nomeAluno" => "Tanaka", "nota1" => 7, "nota2" => 8],
+    ["nomeAluno" => "Cleiton", "nota1" => 5, "nota2" => 6],
+    ["nomeAluno" => "Cleide", "nota1" => 4, "nota2" => 7],
+    ["nomeAluno" => "Cleber", "nota1" => 9, "nota2" => 9],
+    ["nomeAluno" => "Claudio", "nota1" => 6, "nota2" => 5]
+    ];
     ?>
 
+    <div class="container"> 
     <?php
-    function situacao($media) {
-        if ($media >= 7) {
-            return "Aprovado";
-        }
-            return "Reprovado";
-    }     
+    foreach ($alunos as $aluno) {
+        $media = calcularMedia($aluno["nota1"], $aluno["nota2"]);
+        $situacao = verificarSituacao($media);
+        
+        echo "<div style='color:".($situacao === "Aprovado"?"blue":"red")."'>";
+        echo $aluno["nomeAluno"]." - Média: ".$media." ".$situacao;
+        echo "</div>";
+    }
     ?>
-
-    <p>Média: <?=$media?> </p> 
-    <p>Situação: <?=situacao($media)?></p>
-
+    </div>
 
 </body>
 </html>
