@@ -6,13 +6,21 @@
     <title>Exercicio 5 - Funções</title>
 
 <style>
-h1 {text-align: center;}
+h1 {
+    text-align: center;
+    background-color: grey;
+
+    margin: auto;
+    width: 950px;
+}
 .container {
     text-align: center;
-    width: 950px;
     background-color: lightgrey;
     box-shadow: black 2px 2px 10px;
+    
     margin: auto;
+    width: 950px;
+
     font-size: 2rem;
 }
 
