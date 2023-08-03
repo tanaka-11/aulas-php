@@ -74,7 +74,19 @@
 <!-- Usando uma função como parte de uma condição -->
     <?php if (soma (2,3,10) >= 10) { ?>
         <p>Lorem, ipsum dolor sit.</p>
-    <?php } ?>    
+    <?php } ?> 
+    
+    <h3>Função com parâmetros opcionais</h3>
+
+    <!-- $pessoa é um parâmetro opcional com um valor padrão de = "convidado(a)".  -->
+    <?php 
+        function saudacao($mensagem, $pessoa = "convidado(a)"){
+            return "Olá, $mensagem $pessoa!";
+    }        
+    ?>
+    <p> <?=saudacao("Bom dia", "Tanaka")?> </p>
+    <p> <?=saudacao("Boa noite", "Melissa")?> </p>
+    <p> <?=saudacao("Boa tarde")?> </p>
 </body>
 
 </html>
