@@ -29,7 +29,7 @@ body {background-color: lightslategrey;}
 
 div:hover {
     background-color: floralwhite;
-    padding: 1px;
+    padding: 0.3px;
     cursor: pointer;
 }
 </style>
