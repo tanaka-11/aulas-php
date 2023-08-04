@@ -64,9 +64,11 @@ div:hover {
         $media = calcularMedia($aluno["nota1"], $aluno["nota2"]);
         $situacao = verificarSituacao($media);
     ?>      
+    
     <div style="color:<?=$situacao === "Aprovado" ? "blue" : "red" ?>"> 
-    <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> - <?=$situacao?></p>    
+       <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> - <?=$situacao?></p>    
     </div>
+    
     <hr>
     <?php
     }
