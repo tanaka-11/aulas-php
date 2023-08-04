@@ -35,38 +35,33 @@ body {background-color: lightslategrey;}
     <h1>Calculando Média de Notas</h1>
     
     <?php
-    function calcularMedia($nota1, $nota2) {
+    function calcularMedia(float $nota1, float $nota2):float {
         return ($nota1 + $nota2) / 2;
     }
 
-    function verificarSituacao($media) {
+    function verificarSituacao(float $media):string {
         return ($media >= 7)?"Aprovado":"Reprovado";
     }
     ?>
 
     <?php
     $alunos = [
-    ["nomeAluno" => "Tanaka", "nota1" => 7, "nota2" => 8],
-    ["nomeAluno" => "Cleiton", "nota1" => 5, "nota2" => 6],
-    ["nomeAluno" => "Cleide", "nota1" => 4, "nota2" => 7],
-    ["nomeAluno" => "Cleber", "nota1" => 9, "nota2" => 9],
-    ["nomeAluno" => "Claudio", "nota1" => 6, "nota2" => 5]
+        ["nomeAluno" => "Tanaka", "nota1" => 7, "nota2" => 8],
+        ["nomeAluno" => "Cleiton", "nota1" => 5, "nota2" => 6],
+        ["nomeAluno" => "Cleide", "nota1" => 4, "nota2" => 7],
+        ["nomeAluno" => "Cleber", "nota1" => 9, "nota2" => 9],
+        ["nomeAluno" => "Claudio", "nota1" => 6, "nota2" => 5]
     ];
 
     foreach ($alunos as $aluno) {
         $media = calcularMedia($aluno["nota1"], $aluno["nota2"]);
         $situacao = verificarSituacao($media);
-
-        
-        echo "<div style='color:".($situacao === "Aprovado"?"blue":"red")."'>";
-
-        ?>
-    
-    <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> - <?=$situacao?></p>
-    
-    <?php    
-        echo "</div>";
-        echo "<hr>";
+    ?>      
+    <div style="color:<?=$situacao === "Aprovado" ? "blue" : "red" ?>"> 
+    <p><?=$aluno["nomeAluno"]?> - Média: <?=$media?> - <?=$situacao?></p>    
+    </div>
+    <hr>
+    <?php
     }
     ?>
 
