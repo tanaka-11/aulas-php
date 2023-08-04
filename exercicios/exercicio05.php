@@ -26,6 +26,12 @@ h1, .container {
 }
 
 body {background-color: lightslategrey;}
+
+div:hover {
+    background-color: floralwhite;
+    padding: 1px;
+    cursor: pointer;
+}
 </style>
 
 </head>
