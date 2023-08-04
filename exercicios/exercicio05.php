@@ -57,7 +57,7 @@ div:hover {
         ["nomeAluno" => "Cleiton", "nota1" => 5, "nota2" => 6],
         ["nomeAluno" => "Cleide", "nota1" => 4, "nota2" => 7],
         ["nomeAluno" => "Cleber", "nota1" => 9, "nota2" => 9],
-        ["nomeAluno" => "Claudio", "nota1" => 6, "nota2" => 5]
+        ["nomeAluno" => "Claudio", "nota1" => 6, "nota2" => 5]  
     ];
 
     foreach ($alunos as $aluno) {
