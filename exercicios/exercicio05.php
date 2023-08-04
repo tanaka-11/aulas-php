@@ -35,8 +35,8 @@ body {background-color: lightslategrey;}
     <h1>Calculando Média de Notas</h1>
     
     <?php
-    function calcularMedia(float $nota1, float $nota2):float {
-        return ($nota1 + $nota2) / 2;
+    function calcularMedia(float $n1, float $n2):float {
+        return ($n1 + $n2) / 2;
     }
 
     function verificarSituacao(float $media):string {
