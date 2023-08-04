@@ -67,7 +67,15 @@ h1 {text-align: center;}
     <hr>
 
     <h2>Arrays</h2>
+    <h3>implode() - Função que transforma array numa string.</h3>
     
+    <?php
+        $cantores = ["Kevin", "Paiva", "Hariel"];
+        $textoCantor = implode(" - ", $cantores);
+    ?>
+    
+    <pre><?=var_dump($cantores)?></pre>
+    <pre><?=var_dump($textoCantor)?></pre>
     <hr>
 
     <h2>Filtros</h2>
