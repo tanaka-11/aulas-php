@@ -9,6 +9,7 @@
 
 <style>
 h1 {text-align: center;}
+
 </style>    
 
 </head>
@@ -19,24 +20,29 @@ h1 {text-align: center;}
     
     <h2>Strings</h2>
     <h3>trim() - Função que remove espaços antes e depois de strings.</h3>
+    
     <?php
         $nome = "  Tanaka   ";
         $semEspaco = trim($nome);
     ?>
+
     <pre> <?=var_dump($nome)?> </pre>
     <pre> <?=var_dump($semEspaco)?> </pre>
     
     <h3>str_replace() - Função que permite substituição de strings/caracteres.</h3>
+    
     <?php
         $fraseFeia = "Eliel bananão";
         $fraseElegante = str_replace(
             ["xarope","bananão"],["***","🤬"],$fraseFeia
         );
     ?>
+
     <p><?=$fraseFeia?></p>
     <p><?=$fraseElegante?></p>
     
     <h3>explode() - Função que transforma uma string numa array.</h3>
+    
     <?php
         $linguagens = "HTML - CSS - JS - PHP";
         $arrayLinguagens = explode(" - ", $linguagens);
@@ -47,7 +53,17 @@ h1 {text-align: center;}
     <hr>
     
     <h2>Númericas</h2>
+    <h3>Min, Max, Round</h3>
     
+    <?php
+        $valores = [10, 5, 50, 100, 1000];
+        $qualquerValor = 1259.78
+    
+    ?>
+
+    <p><b>Menor Valor (min):</b><?=min($valores)?></p>
+    <p><b>Maior Valor (max):</b><?=max($valores)?></p>
+    <p><b>Arredondamento (round):</b><?=round($qualquerValor)?></p>
     <hr>
 
     <h2>Arrays</h2>
