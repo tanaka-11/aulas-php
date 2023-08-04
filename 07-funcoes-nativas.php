@@ -20,7 +20,6 @@ h1 {text-align: center;}
     
     <h2>Strings</h2>
     <h3>trim() - Função que remove espaços antes e depois de strings.</h3>
-    
     <?php
         $nome = "  Tanaka   ";
         $semEspaco = trim($nome);
@@ -30,7 +29,6 @@ h1 {text-align: center;}
     <pre> <?=var_dump($semEspaco)?> </pre>
     
     <h3>str_replace() - Função que permite substituição de strings/caracteres.</h3>
-    
     <?php
         $fraseFeia = "Eliel bananão";
         $fraseElegante = str_replace(
@@ -42,7 +40,6 @@ h1 {text-align: center;}
     <p><?=$fraseElegante?></p>
     
     <h3>explode() - Função que transforma uma string numa array.</h3>
-    
     <?php
         $linguagens = "HTML - CSS - JS - PHP";
         $arrayLinguagens = explode(" - ", $linguagens);
@@ -54,7 +51,6 @@ h1 {text-align: center;}
     
     <h2>Númericas</h2>
     <h3>Min, Max, Round</h3>
-    
     <?php
         $valores = [10, 5, 50, 100, 1000];
         $qualquerValor = 1259.78
@@ -68,7 +64,6 @@ h1 {text-align: center;}
 
     <h2>Arrays</h2>
     <h3>implode() - Função que transforma array numa string.</h3>
-    
     <?php
         $cantores = ["Kevin", "Paiva", "Hariel"];
         $textoCantor = implode(" - ", $cantores);
@@ -78,18 +73,34 @@ h1 {text-align: center;}
     <pre><?=var_dump($textoCantor)?></pre>
     
     <h3>extract() - Função que extrai chaves associativas para variáveis.</h3>
-    
     <?php
         $aluno = ["id" => 1, "nome" => "Tanaka", "idade" => 21];
         extract($aluno)
     ?>
 
     <ul>
-        <li><b>ID:</b><?=$id?></li>
-        <li><b>Nome:</b><?=$nome?></li>
-        <li><b>Idade:</b><?=$idade?></li>
+        <li><b>ID:</b> <?=$id?></li>
+        <li><b>Nome:</b> <?=$nome?></li>
+        <li><b>Idade:</b> <?=$idade?></li>
     </ul>
+
+    <h3>array_sum() - Função para somar os valores de um array.</h3>
+    <?php
+        $total = array_sum($valores);
+    ?>
+    
+    <p><b>Soma dos Valores:</b><?=$total?></p>
+    
+    <h3>array_unique() - Função que retorna um novo array com dados únicos.</h3>
+    <?php
+        $produtos = ["TV", "TV", "Notebook", "Geladeira", "Monitor", "Notebook", "Teclado"];
+        $produtosUnicos = array_unique($produtos)
+    ?>
+
+    <pre><?=var_dump($produtos)?></pre>
+    <pre><?=var_dump($produtosUnicos)?></pre>
     <hr>
+
 
     <h2>Filtros</h2>
     
