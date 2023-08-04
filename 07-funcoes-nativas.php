@@ -26,7 +26,7 @@ h1 {text-align: center;}
     <pre> <?=var_dump($nome)?> </pre>
     <pre> <?=var_dump($semEspaco)?> </pre>
     
-    <h3>str_replace() - Função que permite substituição de strings/caracteres</h3>
+    <h3>str_replace() - Função que permite substituição de strings/caracteres.</h3>
     <?php
         $fraseFeia = "Eliel bananão";
         $fraseElegante = str_replace(
@@ -35,7 +35,15 @@ h1 {text-align: center;}
     ?>
     <p><?=$fraseFeia?></p>
     <p><?=$fraseElegante?></p>
+    
+    <h3>explode() - Função que transforma uma string numa array.</h3>
+    <?php
+        $linguagens = "HTML - CSS - JS - PHP";
+        $arrayLinguagens = explode(" - ", $linguagens);
+    ?>
 
+    <pre><?=var_dump($linguagens)?></pre>
+    <pre><?=var_dump($arrayLinguagens)?></pre>
     <hr>
     
     <h2>Númericas</h2>
