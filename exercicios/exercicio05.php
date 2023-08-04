@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Exercicio 5 - Funções</title>
 
 <style>
@@ -55,6 +56,7 @@ body {background-color: lightslategrey;}
     foreach ($alunos as $aluno) {
         $media = calcularMedia($aluno["nota1"], $aluno["nota2"]);
         $situacao = verificarSituacao($media);
+
         
         echo "<div style='color:".($situacao === "Aprovado"?"blue":"red")."'>";
 
