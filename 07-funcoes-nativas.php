@@ -25,6 +25,17 @@ h1 {text-align: center;}
     ?>
     <pre> <?=var_dump($nome)?> </pre>
     <pre> <?=var_dump($semEspaco)?> </pre>
+    
+    <h3>str_replace() - Função que permite substituição de strings/caracteres</h3>
+    <?php
+        $fraseFeia = "Eliel bananão";
+        $fraseElegante = str_replace(
+            ["xarope","bananão"],["***","🤬"],$fraseFeia
+        );
+    ?>
+    <p><?=$fraseFeia?></p>
+    <p><?=$fraseElegante?></p>
+
     <hr>
     
     <h2>Númericas</h2>
