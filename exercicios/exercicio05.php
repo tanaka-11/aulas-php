@@ -14,7 +14,7 @@ h1, .container {
     box-shadow: black 2px 2px 10px;
     margin: auto;
     margin-top: 120px;
-    max-width: 950px;
+    max-width: 900px;
 } 
 
 .container {
