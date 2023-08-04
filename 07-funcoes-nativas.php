@@ -20,9 +20,11 @@ h1 {text-align: center;}
     <h2>Strings</h2>
     <h3>trim() - Função que remove espaços antes e depois de strings.</h3>
     <?php
-        $nome = "  Tanaka linda "
+        $nome = "  Tanaka   ";
+        $semEspaco = trim($nome);
     ?>
-
+    <pre> <?=var_dump($nome)?> </pre>
+    <pre> <?=var_dump($semEspaco)?> </pre>
     <hr>
     
     <h2>Númericas</h2>
