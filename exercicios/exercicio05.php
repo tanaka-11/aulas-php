@@ -31,6 +31,7 @@ div:hover {
     background-color: floralwhite;
     padding: 0.3px;
     cursor: pointer;
+    opacity: 90%;
 }
 </style>
 
