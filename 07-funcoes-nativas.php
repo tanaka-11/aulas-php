@@ -76,6 +76,19 @@ h1 {text-align: center;}
     
     <pre><?=var_dump($cantores)?></pre>
     <pre><?=var_dump($textoCantor)?></pre>
+    
+    <h3>extract() - Função que extrai chaves associativas para variáveis.</h3>
+    
+    <?php
+        $aluno = ["id" => 1, "nome" => "Tanaka", "idade" => 21];
+        extract($aluno)
+    ?>
+
+    <ul>
+        <li><b>ID:</b><?=$id?></li>
+        <li><b>Nome:</b><?=$nome?></li>
+        <li><b>Idade:</b><?=$idade?></li>
+    </ul>
     <hr>
 
     <h2>Filtros</h2>
