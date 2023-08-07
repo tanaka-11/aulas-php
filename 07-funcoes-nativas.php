@@ -112,8 +112,21 @@ h1 {text-align: center;}
     <!-- Se o e-mail informado for inválido, ou seja,
     se não seguir o padrão geral de endereços de e-mail,
     a função abaixo retornará "false".  -->
-
     <pre><?=var_dump(filter_var ($email, FILTER_VALIDATE_EMAIL) )?></pre>
+    
+    <h3>Sanitização</h3>
+    <?php
+       $ataque = "<script>
+       document.body.innerHTML = '<h1>Sou ráqui!! mwahaha :( </h1>'
+       </script>";
+
+       $ataqueSanitizado = filter_var($ataque, FILTER_SANITIZE_SPECIAL_CHARS);
+       
+       // Execução com sanitização (script é anulado)
+        echo $ataqueSanitizado;
+    ?>
+    
+    <hr>
 
     <h2>Segurança</h2>
     
