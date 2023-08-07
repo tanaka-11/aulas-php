@@ -103,8 +103,17 @@ h1 {text-align: center;}
 
 
     <h2>Filtros</h2>
-    
-    <hr>
+    <p>Recursos/Constantes de análise e limpeza de dados aplicados através das funções <code>filter_var()</code> e <code>filter_input()</code>.</p>
+   
+    <h3>Validação</h3>
+    <?php
+        $email = "huttenloucher@gmail.com"
+    ?>
+    <!-- Se o e-mail informado for inválido, ou seja,
+    se não seguir o padrão geral de endereços de e-mail,
+    a função abaixo retornará "false".  -->
+
+    <pre><?=var_dump(filter_var ($email, FILTER_VALIDATE_EMAIL) )?></pre>
 
     <h2>Segurança</h2>
     
