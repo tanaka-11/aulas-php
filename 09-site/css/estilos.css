@@ -6,16 +6,27 @@ body {
 h1 {text-align: center;}
 
 nav {
-    background-color: lightgrey;
+    background-color: darkslateblue;
     width: 950px;
+    height: 60px;
     margin: auto;
+    border-radius: 20px;
+    
+    
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 nav a {
     font-size: 2rem;
+    color: white;
+    
 }
-nav a:hover {background-color:gray;}
+nav a:hover {
+    color: cornflowerblue;
+    height: 50px;
+    opacity: 70%;
+    border-radius: 20px;
+}
 
 footer {
     text-align: center;
