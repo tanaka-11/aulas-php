@@ -11,13 +11,15 @@
     <p>Receber e processar dados via <b>_POST</b></p>
     
     <!-- Capturando dados transmitidos -->
-    
+    <?php
+        extract($_POST); 
+    ?>
 
     <h2>Dados:</h2>
     <ul>
-        <li>Nome: </li>
-        <li>E-mail: </li>
-        <li>Mensagem: </li>
+        <li>Nome: <?=$nome?></li>
+        <li>E-mail: <?=$email?></li>
+        <li>Mensagem: <?=$mensagem?></li>
     </ul>
 </body>
 </html>
