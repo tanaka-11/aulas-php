@@ -41,7 +41,12 @@
         <?php }?>
 
         <li>Idade: <?=$idade?></li> 
-        <li>interesses: <?=implode("," ,$interesses)?></li>
+        
+        <?php 
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        if(isset($_POST["check_box"])) { ?>
+            <li>interesses: <?=implode("," ,$interesses)?></li>
+        <?php } ?>
 
     </ul>
     <p><a href=10-formulario.html>Voltar</a></p>
