@@ -27,7 +27,7 @@
         $email = $_POST["email"];
         $mensagem = $_POST["mensagem"];
         $idade = $_POST["idade"]; 
-        $interesses = $_POST["interesses"];
+        $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
     ?>
 
     <h2>Dados:</h2>
