@@ -1,8 +1,8 @@
 </main>
     <?php
         $dataHoraAtual = date ("d/m/Y");
-        date_default_timezone_set("America/Sao_Paulo");
         $hora = date("H:i");
+        date_default_timezone_set("America/Sao_Paulo");
     ?>
 
     <footer>

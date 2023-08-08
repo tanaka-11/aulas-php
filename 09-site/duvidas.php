@@ -1,3 +1,7 @@
+<?php
+$titulo = "Duvidas";
+?>
+
 <?php require "includes/cabecalho.php" ?>
         <h2>Página de dúvidas</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugit, aperiam sapiente commodi quibusdam dolore?</p>
