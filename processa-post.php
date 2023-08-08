@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Processo _POST - PHP</title>
-
+    
 </head>
 <body>
     <h1>Exemplo utilizando o processamento _POST</h1>
