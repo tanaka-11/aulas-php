@@ -1,3 +1,15 @@
+<?php
+// Descobrindo o nome da página aberta no momento com uma variavel global.
+$pagina = basename($_SERVER['PHP_SELF']);
+
+switch($pagina){
+    case "index.php": $titulo = "Página inicial"; break;
+    case "cursos.php": $titulo = "Cursos"; break;
+    case "duvidas.php": $titulo = "Dúvidas"; break;
+    default : $titulo = "Contato"; break;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -1,6 +1,4 @@
-<?php
-$titulo = "Cursos";
-?>
+
 
 <?php require "includes/cabecalho.php" ?>
 
