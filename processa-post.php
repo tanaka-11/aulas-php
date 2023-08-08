@@ -12,7 +12,9 @@
     
     <!-- Capturando dados transmitidos -->
     <?php
-        extract($_POST); 
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $mensagem = $_POST["mensagem"]; 
     ?>
 
     <h2>Dados:</h2>
