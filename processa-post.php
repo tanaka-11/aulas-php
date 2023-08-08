@@ -41,7 +41,8 @@
         <?php }?>
 
         <li>Idade: <?=$idade?></li> 
-        <li>interesses: <?=$interesses?></li>  
+        <li>interesses: <?=implode("," ,$interesses)?></li>
+
     </ul>
     <p><a href=10-formulario.html>Voltar</a></p>
 
