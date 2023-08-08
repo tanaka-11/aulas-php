@@ -32,7 +32,12 @@
     <ul>
         <li>Nome: <?=$nome?></li>
         <li>E-mail: <?=$email?></li>
+        
+    <!-- Usando o "!"(Não), para inverter a logica do empty()  -->
+        <?php if(!empty($mensagem)){ ?>
         <li>Mensagem: <?=$mensagem?></li>
+        <?php }?>    
+
     </ul>
     <p><a href=10-formulario.html>Voltar</a></p>
 
