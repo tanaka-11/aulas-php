@@ -5,13 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Processo _POST - PHP</title>
+
+<style>
+h1, p {text-align: center;}
     
+p {
+    color: white;
+    text-shadow: #2D3945 1px 1px 10px;
+    background-color: #2D3945;
+}
+    
+p a {color: white;}
+    
+h2 {
+    font-size: 2rem;
+    padding-left: 40px;
+}
+    
+body {background-color: lightslategray;}
+    
+.container {
+    color: #1081A3;
+    text-shadow: #2D3945 1px 1px 10px;
+    background-color: #2D3945;
+    width: 90%;
+    margin: auto;
+}
+
+ul li{
+    list-style: none;
+    font-size: 1.5rem;
+
+    color: white;
+    text-shadow: #2D3945 1px 1px 10px;
+    background-color: #2D3945;
+}
+
+
+</style>
+
 </head>
 <body>
+<div class="container">    
     <h1>Exemplo utilizando o processamento _POST</h1>
-    <hr>
     <p>Receber e processar dados via <b>_POST</b></p>
-    
+    <hr>
     <!-- Capturando dados transmitidos -->
     <?php
     // Confirmando se os campos do form estão vazios.
@@ -29,7 +67,7 @@
         $idade = $_POST["idade"]; 
         $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
     ?>
-
+<div class="box">
     <h2>Dados:</h2>
     <ul>
         <li>Nome: <?=$nome?></li>
@@ -49,7 +87,9 @@
         <?php } ?>
 
     </ul>
+</div>
     <p><a href=10-formulario.html>Voltar</a></p>
+</div>
 
     <?php
     }
