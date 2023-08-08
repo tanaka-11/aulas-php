@@ -72,19 +72,13 @@ ul li{
     <ul>
         <li>Nome: <?=$nome?></li>
         <li>E-mail: <?=$email?></li>
-    
+        <li>Idade: <?=$idade?></li> 
+        <li>Interesses: <?= implode(", ", $interesses)?></li>
+        
         <!-- Usando o "!"(Não), para inverter a logica do empty()  -->
         <?php if(!empty($mensagem)){ ?>
             <li>Mensagem: <?=$mensagem?></li>
         <?php }?>
-
-        <li>Idade: <?=$idade?></li> 
-        
-        <?php 
-        if($_SERVER["REQUEST_METHOD"] == "POST")
-        if(isset($_POST["check_box"])) { ?>
-            <li>interesses: <?=implode("," ,$interesses)?></li>
-        <?php } ?>
 
     </ul>
 </div>
