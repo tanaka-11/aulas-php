@@ -2,11 +2,18 @@
 // Descobrindo o nome da página aberta no momento com uma variavel global.
 $pagina = basename($_SERVER['PHP_SELF']);
 
-switch($pagina){
-    case "index.php": $titulo = "Página inicial"; break;
-    case "cursos.php": $titulo = "Cursos"; break;
-    case "duvidas.php": $titulo = "Dúvidas"; break;
-    default : $titulo = "Contato"; break;
+// switch($pagina){
+//     case "index.php": $titulo = "Página inicial"; break;
+//     case "cursos.php": $titulo = "Cursos"; break;
+//     case "duvidas.php": $titulo = "Dúvidas"; break;
+//     default : $titulo = "Contato"; break;
+// }
+
+$titulo = match($pagina){
+    "index.php" => "Página inicial",
+    "cursos.php" => "Cursos",
+    "duvidas.php" => "Dúvidas",
+    default => "Contato"
 }
 ?>
 
