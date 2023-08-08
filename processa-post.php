@@ -67,7 +67,7 @@ ul li{
         $idade = $_POST["idade"]; 
         $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
     ?>
-<div class="box">
+
     <h2>Dados:</h2>
     <ul>
         <li>Nome: <?=$nome?></li>
@@ -81,7 +81,7 @@ ul li{
         <?php }?>
 
     </ul>
-</div>
+
     <p><a href=10-formulario.html>Voltar</a></p>
 </div>
 
