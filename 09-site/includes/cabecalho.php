@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+
+
     <header>
         <h1>Site PHP</h1>
         <nav>
@@ -16,5 +18,5 @@
             <a href="contato.php">Contato</a>
         </nav>
     </header>
-    
+
     <main>
