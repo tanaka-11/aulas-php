@@ -25,17 +25,23 @@
     } else {
         $nome = $_POST["nome"];
         $email = $_POST["email"];
-        $mensagem = $_POST["mensagem"]; 
+        $mensagem = $_POST["mensagem"];
+        $idade = $_POST["idade"]; 
+        $interesses = $_POST["interesses"];
     ?>
 
     <h2>Dados:</h2>
     <ul>
         <li>Nome: <?=$nome?></li>
         <li>E-mail: <?=$email?></li>
-    <!-- Usando o "!"(Não), para inverter a logica do empty()  -->
+    
+        <!-- Usando o "!"(Não), para inverter a logica do empty()  -->
         <?php if(!empty($mensagem)){ ?>
-        <li>Mensagem: <?=$mensagem?></li>
-        <?php }?>    
+            <li>Mensagem: <?=$mensagem?></li>
+        <?php }?>
+
+        <li>Idade: <?=$idade?></li> 
+        <li>interesses: <?=$interesses?></li>  
     </ul>
     <p><a href=10-formulario.html>Voltar</a></p>
 
