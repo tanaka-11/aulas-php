@@ -18,7 +18,6 @@ h2 {
 }
 
 p {
-    font-weight: bold;
     font-size: 1.25rem;
 }
 
@@ -89,11 +88,11 @@ button:hover, button:focus {
     ?>
 
     <h2>Dados cadastrados: </h2>
-    <p>Produto: <?=$nomeProduto?></p>
-    <p>Fabricante: <?=$fabricante?></p>
-    <p>Preço: <?=$preco?></p>
-    <p>Disponibilidade: <?=$disponibilidade?></p>
-    <p>Descrição do produto: <?=$descricao?></p>
+    <p><b>Produto:</b> <?=$nomeProduto?></p>
+    <p><b>Fabricante:</b> <?=$fabricante?></p>
+    <p><b>Preço:</b> R$<?=number_format($preco, 2, ",", ".")?></p>
+    <p><b>Disponibilidade:</b> <?=$disponibilidade?></p>
+    <p><b>Descrição do produto:</b> <?=$descricao?></p>
 
     <?php } else { ?>
     <form action="#" method="post">
@@ -108,7 +107,7 @@ button:hover, button:focus {
         <label for="fabricante">Fabricante:</label>
         <select name="fabricante">
         <option></option>
-        
+
     <?php foreach($fabricantes as $fabricante) { ?>        
         <option> <?=$fabricante?> </option>
     <?php } ?>
@@ -139,7 +138,9 @@ button:hover, button:focus {
 
     <button type="submit" name="enviar" id="enviar">Enviar</button>
     </form>
-    <?php } ?>   
+    <?php } ?> 
+
+    
 </body>
 
 </html>
