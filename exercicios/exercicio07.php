@@ -6,12 +6,71 @@
     
     <title>Cadastro de Produtos com formulário</title>
 
+<style>
+h1 {
+    text-align: center;
+    text-shadow: #1081A3 1px 1px 2px;
+    color: #FFF;
+}
+h2 {
+    text-shadow: #1081A3 1px 1px 2px;
+    color: #FFF;
+}
+
+p {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+body {background-color: lightslategray;}
+
+form {
+    width: 90%;
+    margin: auto;
+    padding: 1.25rem;
+}
+
+label, div {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: #2D3945 2px 2px 5px;
+}
+
+input:not([type=radio], [type=checkbox]), select, textarea {
+    border: none;
+    padding: 8px;
+    width: 100%;
+    box-shadow:#2D3945 2px 2px 10px;
+    height: 40px;
+    font-size: 1.2rem;
+    background-color: lightgrey;
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    background-color: #1081A3;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100%;
+    margin: auto;
+}
+button:hover, button:focus {
+    cursor: pointer;
+    background-color: #BBC1CD;
+    color: #1081A3;
+}
+
+
+</style>   
+
 </head>
 
 <body>
 
    <h1>Cadastro de Produtos</h1>
-
+    <hr>
     <?php
     if (isset($_POST["enviar"])) {
         $nomeProduto = filter_input(INPUT_POST, "nomeProduto", FILTER_SANITIZE_SPECIAL_CHARS);
