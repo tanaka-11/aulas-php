@@ -64,9 +64,12 @@ ul li{
         $nome = $_POST["nome"];
         $email = $_POST["email"];
         $mensagem = $_POST["mensagem"];
-        $idade = $_POST["idade"]; 
+        $idade = $_POST["idade"];
         $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
-    ?>
+        
+        // Exemplo do operador de coalescência:
+        //$interesses = $_POST["interesses"]  ?? []; 
+        ?>
 
     <h2>Dados:</h2>
     <ul>
