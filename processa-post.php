@@ -61,23 +61,30 @@ ul li{
     
     <?php
     } else {
-        $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $mensagem = $_POST["mensagem"];
-        $idade = $_POST["idade"];
-        $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
-        
-        // Exemplo do operador de coalescência:
-        //$interesses = $_POST["interesses"]  ?? []; 
+        // filter_input() usado para impedir caracteres especiais
+        $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+
+        $idade = filter_input(INPUT_POST, "idade", FILTER_SANITIZE_NUMBER_INT);
+
+        $mensagem = filter_input(INPUT_POST, "mensagem", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        $interesses = filter_var_array($_POST["interesses"]  ?? [], FILTER_SANITIZE_SPECIAL_CHARS);
+
+        // Exemplo com ternário e isset:
+        // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
         ?>
 
     <h2>Dados:</h2>
     <ul>
         <li>Nome: <?=$nome?></li>
         <li>E-mail: <?=$email?></li>
-        <li>Idade: <?=$idade?></li> 
-        <li>Interesses: <?= implode(", ", $interesses)?></li>
+        <li>Idade: <?=$idade?></li>
         
+        <!-- Transformando o array em uma string com o implode()-->
+        <li>Interesses: <?= implode(", ", $interesses)?></li>
+
         <!-- Usando o "!"(Não), para inverter a logica do empty()  -->
         <?php if(!empty($mensagem)){ ?>
             <li>Mensagem: <?=$mensagem?></li>
