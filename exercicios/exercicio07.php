@@ -72,6 +72,10 @@ button:hover, button:focus {
    <h1>Cadastro de Produtos</h1>
     <hr>
     <?php
+        $fabricantes = ["LG", "Samsung", "Apple", "Philco"];     
+    ?>
+
+    <?php
     if (isset($_POST["enviar"])) {
         $nomeProduto = filter_input(INPUT_POST, "nomeProduto", FILTER_SANITIZE_SPECIAL_CHARS);
         
@@ -99,24 +103,16 @@ button:hover, button:focus {
         <input type="text" name="nomeProduto" id="nomeProduto" required>
     </p>
 
-    <?php
-        $fabricantes = [
-        "LG", "Samsung", "Apple", "Philco"
-    ];     
-    ?>
 
     <div>
         <label for="fabricante">Fabricante:</label>
         <select name="fabricante">
         <option></option>
-    <?php
-        foreach($fabricantes as $fabricante) {
-    ?>        
+        
+    <?php foreach($fabricantes as $fabricante) { ?>        
         <option> <?=$fabricante?> </option>
-    <?php   
-    }
-    ?>
-    </select>
+    <?php } ?>
+        </select>
     </div>
     
     <p>
