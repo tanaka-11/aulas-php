@@ -55,7 +55,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
     background-color: lightgrey;
 }
 
-button {
+.button {
     border: none;
     padding: 1rem;
     background-color: #1081A3;
@@ -65,7 +65,7 @@ button {
     width: 100%;
     margin: auto;
 }
-button:hover, button:focus {
+.button:hover, .button:focus {
     cursor: pointer;
     background-color: #BBC1CD;
     color: #1081A3;
@@ -93,19 +93,23 @@ button:hover, button:focus {
             
     ?>
 
-   
-    <?php
+
+<?php
     if(isset($_POST["enviar"])) {
         $nomeProduto = filter_input(INPUT_POST, "nomeProduto", FILTER_SANITIZE_SPECIAL_CHARS);
         
         $fabricante =  filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_SPECIAL_CHARS);
         
         $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_INT);
-
+        
         $disponibilidade = filter_input(INPUT_POST,"disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);
-
+        
         $descricao = filter_input(INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);
-    ?>
+        
+    if (empty($nomeProduto) || empty($preco)) { ?>
+        <p>Os campos nome do produto e preço são obrigatórios</p>
+       <a href="exercicio07.php" class="button">Voltar</a>
+    <?php } else { ?>
     
     <h2>Dados cadastrados: </h2>
     <p><b>Produto:</b> <?=$nomeProduto?></p>
@@ -114,10 +118,6 @@ button:hover, button:focus {
     <p><b>Disponibilidade:</b> <?=$disponibilidade?></p>
     <p><b>Descrição do produto:</b> <?=$descricao?></p>
     
-    <?php
-    if (empty($nomeProduto) || empty($precoFloat)) { ?>
-     <p>Os campos nome do produto e preço são obrigatórios</p>
-     <a href="exercicio07.php">Voltar</a>
     <?php } ?>
        
     <?php } else { ?>
@@ -163,7 +163,7 @@ button:hover, button:focus {
 
     <br>
 
-    <button type="submit" name="enviar" id="enviar">Enviar</button>
+    <button class="button" type="submit" name="enviar" id="enviar">Enviar</button>
     </form>
     <?php } ?>
     
