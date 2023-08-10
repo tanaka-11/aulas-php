@@ -8,9 +8,10 @@
 
 <style>
 h1 {
-    text-align: center;
-    text-shadow: #1081A3 1px 1px 2px;
+    background-color: #1081A3;
     color: #FFF;
+    text-align: center;
+    text-shadow: #2D3945 1px 1px 2px;
 }
 h2 {
     text-shadow: #1081A3 1px 1px 2px;
@@ -82,7 +83,7 @@ button:hover, button:focus {
         
         $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_INT);
 
-        $disponibilidade = $_POST["disponibilidade"];
+        $disponibilidade = filter_input(INPUT_POST,"disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);
 
         $descricao = filter_input(INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);
     ?>
