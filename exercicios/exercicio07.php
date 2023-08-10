@@ -85,10 +85,9 @@ input:not([type=radio], [type=checkbox]), select, textarea {
     
     <div class="container">
 
-    <?php
-        $fabricantes = ["LG", "Samsung", "Apple", "Philco"];
-            
-    ?>
+<?php
+    $fabricantes = ["LG", "Samsung", "Apple", "Philco"];
+?>
 
 
 <?php
@@ -105,8 +104,9 @@ input:not([type=radio], [type=checkbox]), select, textarea {
         
     if (empty($nomeProduto) || empty($preco)) { ?>
         <p>Os campos nome do produto e preço são obrigatórios</p>
-       <a class="button" href="exercicio07.php" >Voltar</a>
-    <?php } else { ?>
+        <a class="button" href="exercicio07.php">Voltar</a>
+
+<?php } else { ?>
     
     <h2>Dados cadastrados: </h2>
     <p><b>Produto:</b> <?=$nomeProduto?></p>
@@ -115,9 +115,9 @@ input:not([type=radio], [type=checkbox]), select, textarea {
     <p><b>Disponibilidade:</b> <?=$disponibilidade?></p>
     <p><b>Descrição do produto:</b> <?=$descricao?></p>
     
-    <?php } ?>
+<?php } ?>
        
-    <?php } else { ?>
+<?php } else { ?>
     <form action="#" method="post">
     
     <p>
@@ -131,9 +131,9 @@ input:not([type=radio], [type=checkbox]), select, textarea {
         <select name="fabricante">
         <option></option>
 
-    <?php foreach($fabricantes as $fabricante) { ?>        
+<?php foreach($fabricantes as $fabricante) { ?>        
         <option> <?=$fabricante?> </option>
-    <?php } ?>
+<?php } ?>
 
         </select>
     </div>
@@ -162,7 +162,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
 
     <button class="button" type="submit" name="enviar" id="enviar">Enviar</button>
     </form>
-    <?php } ?>
+<?php } ?>
     
     
 </div>    
