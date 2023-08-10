@@ -55,7 +55,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
     background-color: lightgrey;
 }
 
-.button {
+button, button a {
     border: none;
     padding: 1rem;
     background-color: #1081A3;
@@ -65,7 +65,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
     width: 100%;
     margin: auto;
 }
-.button:hover, .button:focus {
+button:hover, button:focus, button a:hover, button a:focus {
     cursor: pointer;
     background-color: #BBC1CD;
     color: #1081A3;
@@ -108,7 +108,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
         
     if (empty($nomeProduto) || empty($preco)) { ?>
         <p>Os campos nome do produto e preço são obrigatórios</p>
-       <a href="exercicio07.php" class="button">Voltar</a>
+       <button><a href="exercicio07.php" >Voltar</a></button>
     <?php } else { ?>
     
     <h2>Dados cadastrados: </h2>
