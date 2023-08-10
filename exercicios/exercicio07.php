@@ -98,22 +98,20 @@ button:hover, button:focus {
 
         $descricao = filter_input(INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);
     ?>
-
-    <?php
-    if(empty($nomeProduto) || empty($precoFloat)) { ?>
-    <p>Os campos nome do produto e preço são obrigatórios</p>
-    <?php } else { 
-        $precoFloat = (float)$preco;
-    }
-    ?>
-
+    
     <h2>Dados cadastrados: </h2>
     <p><b>Produto:</b> <?=$nomeProduto?></p>
     <p><b>Fabricante:</b> <?=$fabricante?></p>
     <p><b>Preço:</b> R$<?=number_format($precoFloat, 2, ",", ".")?></p>
     <p><b>Disponibilidade:</b> <?=$disponibilidade?></p>
     <p><b>Descrição do produto:</b> <?=$descricao?></p>
-
+    
+    <?php
+    if (empty($nomeProduto) || empty($precoFloat)) { ?>
+     <p>Os campos nome do produto e preço são obrigatórios</p>
+     <a href="exercicio07.php">Voltar</a>
+    <?php } ?>
+       
     <?php } else { ?>
     <form action="#" method="post">
     
@@ -131,7 +129,7 @@ button:hover, button:focus {
     <?php foreach($fabricantes as $fabricante) { ?>        
         <option> <?=$fabricante?> </option>
     <?php } ?>
-    
+
         </select>
     </div>
     
@@ -159,7 +157,9 @@ button:hover, button:focus {
 
     <button type="submit" name="enviar" id="enviar">Enviar</button>
     </form>
-    <?php } ?> 
+    <?php } ?>
+    
+    
 </div>    
 </body>
 
