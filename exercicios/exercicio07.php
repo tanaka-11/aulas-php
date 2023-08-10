@@ -8,21 +8,21 @@
 
 <style>
 h1 {
-    background-color: #1081A3;
     color: #FFF;
     text-align: center;
-    text-shadow: #2D3945 1px 1px 2px;
+    text-shadow: #1081A3 1px 1px 5px;
 }
 h2 {
-    text-shadow: #1081A3 1px 1px 2px;
-    color: #FFF;
+    text-shadow: #BBC1CD 1px 1px 1px;
+    color: #2D3945;
 }
 
 p {
     font-size: 1.25rem;
+    /* color: #2D3945; */
 }
 
-body {background-color: lightslategray;}
+body {background-color: #2D3945;}
 
 form {
     width: 90%;
@@ -35,6 +35,7 @@ label, div {
     color: white;
     text-shadow: #2D3945 2px 2px 5px;
 }
+
 
 input:not([type=radio], [type=checkbox]), select, textarea {
     border: none;
@@ -62,6 +63,12 @@ button:hover, button:focus {
     color: #1081A3;
 }
 
+.container {
+    background-color: lightslategray;
+    width: 90%;
+    margin: auto;
+    padding: 1.05rem;
+}
 
 </style>   
 
@@ -70,7 +77,9 @@ button:hover, button:focus {
 <body>
 
    <h1>Cadastro de Produtos</h1>
-    <hr>
+    
+    <div class="container">
+
     <?php
         $fabricantes = ["LG", "Samsung", "Apple", "Philco"];     
     ?>
@@ -141,7 +150,7 @@ button:hover, button:focus {
     </form>
     <?php } ?> 
 
-    
+</div>    
 </body>
 
 </html>
