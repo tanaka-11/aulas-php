@@ -19,6 +19,7 @@ h2 {
 
 a {
     text-decoration: none;
+    margin: 20px 0;
 }
 
 p {
@@ -96,7 +97,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
         
         $fabricante =  filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_SPECIAL_CHARS);
         
-        $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_INT);
+        $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
         
         $disponibilidade = filter_input(INPUT_POST,"disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);
         
