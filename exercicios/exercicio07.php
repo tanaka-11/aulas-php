@@ -17,6 +17,14 @@ h2 {
     color: #2D3945;
 }
 
+a {
+    font-size: 1.50rem;
+    color: #2D3945;
+    text-decoration: none;
+    text-shadow: #FFF 1px 1px 2px;
+    background-color: #1081A3;
+}
+
 p {
     font-size: 1.25rem;
     /* color: #2D3945; */
@@ -82,7 +90,7 @@ button:hover, button:focus {
 
     <?php
         $fabricantes = ["LG", "Samsung", "Apple", "Philco"];
-        $precoFloat = 0.0;     
+            
     ?>
 
    
@@ -92,7 +100,7 @@ button:hover, button:focus {
         
         $fabricante =  filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_SPECIAL_CHARS);
         
-        $preco = filter_input(INPUT_POST, "precoFloat", FILTER_SANITIZE_NUMBER_INT);
+        $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_INT);
 
         $disponibilidade = filter_input(INPUT_POST,"disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);
 
@@ -102,7 +110,7 @@ button:hover, button:focus {
     <h2>Dados cadastrados: </h2>
     <p><b>Produto:</b> <?=$nomeProduto?></p>
     <p><b>Fabricante:</b> <?=$fabricante?></p>
-    <p><b>Preço:</b> R$<?=number_format($precoFloat, 2, ",", ".")?></p>
+    <p><b>Preço:</b> R$<?=number_format($preco, 2, ",", ".")?></p>
     <p><b>Disponibilidade:</b> <?=$disponibilidade?></p>
     <p><b>Descrição do produto:</b> <?=$descricao?></p>
     
