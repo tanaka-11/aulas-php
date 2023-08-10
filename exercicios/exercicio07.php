@@ -7,6 +7,7 @@
     <title>Cadastro de Produtos com formulário</title>
 
 <style>
+    /* Formatação ficou legal */
 h1 {
     color: #FFF;
     text-align: center;
@@ -40,6 +41,7 @@ label, div {
 }
 
 
+/* Bem lembrado o uso destes seletores */
 input:not([type=radio], [type=checkbox]), select, textarea {
     border: none;
     padding: 8px;
@@ -96,6 +98,8 @@ input:not([type=radio], [type=checkbox]), select, textarea {
         
         $fabricante =  filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_SPECIAL_CHARS);
         
+        /* Aqui no preço, a sanitização precisar ser com number float.
+        Além disso, precisará usar um segundo filtro para permitir o uso de casas decimais. */
         $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_INT);
         
         $disponibilidade = filter_input(INPUT_POST,"disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -130,6 +134,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
         <select name="fabricante">
         <option></option>
 
+        <!-- Uso correto! -->
     <?php foreach($fabricantes as $fabricante) { ?>        
         <option> <?=$fabricante?> </option>
     <?php } ?>
