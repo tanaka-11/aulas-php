@@ -18,16 +18,11 @@ h2 {
 }
 
 a {
-    font-size: 1.50rem;
-    color: #2D3945;
     text-decoration: none;
-    text-shadow: #FFF 1px 1px 2px;
-    background-color: #1081A3;
 }
 
 p {
-    font-size: 1.25rem;
-    /* color: #2D3945; */
+    font-size: 1.50rem; 
 }
 
 body {background-color: #2D3945;}
@@ -55,7 +50,7 @@ input:not([type=radio], [type=checkbox]), select, textarea {
     background-color: lightgrey;
 }
 
-button, button a {
+.button {
     border: none;
     padding: 1rem;
     background-color: #1081A3;
@@ -64,8 +59,9 @@ button, button a {
     border-radius: 8px;
     width: 100%;
     margin: auto;
+
 }
-button:hover, button:focus, button a:hover, button a:focus {
+.button:hover, .button:focus {
     cursor: pointer;
     background-color: #BBC1CD;
     color: #1081A3;
@@ -108,7 +104,7 @@ button:hover, button:focus, button a:hover, button a:focus {
         
     if (empty($nomeProduto) || empty($preco)) { ?>
         <p>Os campos nome do produto e preço são obrigatórios</p>
-       <button><a href="exercicio07.php" >Voltar</a></button>
+       <a class="button" href="exercicio07.php" >Voltar</a>
     <?php } else { ?>
     
     <h2>Dados cadastrados: </h2>
