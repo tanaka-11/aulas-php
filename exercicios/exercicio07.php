@@ -81,26 +81,36 @@ button:hover, button:focus {
     <div class="container">
 
     <?php
-        $fabricantes = ["LG", "Samsung", "Apple", "Philco"];     
+        $fabricantes = ["LG", "Samsung", "Apple", "Philco"];
+        $precoFloat = 0.0;     
     ?>
 
+   
     <?php
-    if (isset($_POST["enviar"])) {
+    if(isset($_POST["enviar"])) {
         $nomeProduto = filter_input(INPUT_POST, "nomeProduto", FILTER_SANITIZE_SPECIAL_CHARS);
         
         $fabricante =  filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_SPECIAL_CHARS);
         
-        $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_INT);
+        $preco = filter_input(INPUT_POST, "precoFloat", FILTER_SANITIZE_NUMBER_INT);
 
         $disponibilidade = filter_input(INPUT_POST,"disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);
 
         $descricao = filter_input(INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);
     ?>
 
+    <?php
+    if(empty($nomeProduto) || empty($precoFloat)) { ?>
+    <p>Os campos nome do produto e preço são obrigatórios</p>
+    <?php } else { 
+        $precoFloat = (float)$preco;
+    }
+    ?>
+
     <h2>Dados cadastrados: </h2>
     <p><b>Produto:</b> <?=$nomeProduto?></p>
     <p><b>Fabricante:</b> <?=$fabricante?></p>
-    <p><b>Preço:</b> R$<?=number_format($preco, 2, ",", ".")?></p>
+    <p><b>Preço:</b> R$<?=number_format($precoFloat, 2, ",", ".")?></p>
     <p><b>Disponibilidade:</b> <?=$disponibilidade?></p>
     <p><b>Descrição do produto:</b> <?=$descricao?></p>
 
@@ -121,6 +131,7 @@ button:hover, button:focus {
     <?php foreach($fabricantes as $fabricante) { ?>        
         <option> <?=$fabricante?> </option>
     <?php } ?>
+    
         </select>
     </div>
     
@@ -149,7 +160,6 @@ button:hover, button:focus {
     <button type="submit" name="enviar" id="enviar">Enviar</button>
     </form>
     <?php } ?> 
-
 </div>    
 </body>
 
