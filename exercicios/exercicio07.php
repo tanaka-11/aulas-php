@@ -75,6 +75,17 @@ input:not([type=radio], [type=checkbox]), select, textarea {
     padding: 1.05rem;
 }
 
+div .botao-voltar a{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    display: block;
+}
+
+div .botao-voltar p {
+    text-align: center;
+}
+
 </style>   
 
 </head>
@@ -103,8 +114,10 @@ input:not([type=radio], [type=checkbox]), select, textarea {
         $descricao = filter_input(INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);
         
     if (empty($nomeProduto) || empty($preco)) { ?>
+        <div class="botao-voltar">
         <p>Os campos nome do produto e preço são obrigatórios</p>
         <a class="button" href="exercicio07.php">Voltar</a>
+        </div>
 
 <?php } else { ?>
     

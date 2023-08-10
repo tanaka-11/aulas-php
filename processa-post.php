@@ -41,7 +41,6 @@ ul li{
     background-color: #2D3945;
 }
 
-
 </style>
 
 </head>
