@@ -115,7 +115,7 @@ div .botao-voltar p {
         
     if (empty($nomeProduto) || empty($preco)) { ?>
         <div class="botao-voltar">
-        <p>Os campos nome do produto e preço são obrigatórios</p>
+        <p><b>Os campos nome do produto e preço são obrigatórios</b></p>
         <a class="button" href="exercicio07.php">Voltar</a>
         </div>
 
